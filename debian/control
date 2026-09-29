@@ -1,9 +1,8 @@
 Source: golang-github-danos-op
 Section: admin
-Priority: extra
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends:
- debhelper (>= 9.20160709),
+Priority: optional
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
  dh-golang (>= 1.18),
  dh-yang,
  golang (>=2:1.4),
@@ -12,14 +11,16 @@ Build-Depends:
  golang-github-danos-utils-patherr-dev,
  golang-github-danos-utils-pathutil-dev,
  golang-github-danos-yang-dev
-Standards-Version: 3.9.8
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/op.git
+Vcs-Browser: https://github.com/nudanos/op
 
 Package: golang-github-danos-op-dev
 Architecture: any
-Priority: extra
 Description: Development libraries for packages in the golang-github-danos-op package
  They can be used to work with the libraries outside of opd itself.
-Depends:
+Depends: 
  golang (>=2:1.1.2),
  golang-github-danos-config-dev,
  golang-github-danos-mgmterror-dev,
@@ -27,4 +28,3 @@ Depends:
  golang-github-danos-utils-pathutil-dev,
  golang-github-danos-yang-dev,
  ${misc:Depends}
-
